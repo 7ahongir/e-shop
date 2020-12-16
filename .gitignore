@@ -1,3 +1,5 @@
 # pycharm project files
 .idea
 #test
+.idea
+.venv

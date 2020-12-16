@@ -1,12 +1,18 @@
-# e-shop
-Elektron magazin
+<h1 align="center">E-Shop</h1>
+<h5 align="center">Elektron magazin</h5>
+<hr>
+
 Bu taqinchoqlar magazini
-Pythonning 3.9.0 versiyasi
-Django 3.1.4
-Bu project qatnashayotganlar
-1.Farziddin 
-2.Jahongir
-3.To'lqin
-4.Aziz
-5.Qobil
-6.Abdulaziz
+
+**Bu project qatnashayotganlar**
+- Farziddin 
+- Jahongir
+- To'lqin
+- Aziz
+- Qobil
+- Abdulaziz
+<hr>
+
+TALABLAR
+--------
+Python: 3.9.0

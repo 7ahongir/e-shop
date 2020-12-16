@@ -1,3 +1,9 @@
+import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, True)
+)
+environ.Env.read_env()
 """
 Django settings for mysite project.
 
@@ -23,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'fpuh(r^h7uhqs1d+au&e2-696o68@p575fpf-_u*8p_z8c9=i8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -76,11 +82,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'e-shop',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': env('dbname'),
+        'USER': env('dbuser'),
+        'PASSWORD': env('dbpassword'),
+        'HOST': env('dbhost'),
+        'PORT': env('dbport'),
     }
 }
 

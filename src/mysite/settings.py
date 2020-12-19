@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'geo',
     'catalog',
     'user',
-    'orders'
+    'orders',
+    'payment',
+    'delivery'
 ]
 
 MIDDLEWARE = [

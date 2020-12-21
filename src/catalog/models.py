@@ -40,6 +40,7 @@ class Model(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
+    photo = models.ImageField(max_length=200)
     product_code = models.IntegerField(default=1)
     product_info = models.TextField(max_length=400)
     product_warranty = models.TextField(max_length=200)

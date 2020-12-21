@@ -2,7 +2,7 @@ from django.db import models
 
 class Delivery_status(models.Model):
     name = models.CharField(max_length=200)
-    info = models.BooleanField()
+    status = models.BooleanField()
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 

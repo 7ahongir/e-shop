@@ -24,4 +24,4 @@ class Districts(models.Model):
     	return self.title
     class Meta:
         verbose_name = "Tuman"
-        verbose_name_plural = "Tumanlar"    
+        verbose_name_plural = "Tumanlar"

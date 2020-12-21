@@ -10,6 +10,5 @@ class DistrictAdmin(admin.ModelAdmin):
 	
 	def region_title(self,obj):
 		return obj.region.title
-
 admin.site.register(Regions,RegionAdmin)
 admin.site.register(Districts,DistrictAdmin)

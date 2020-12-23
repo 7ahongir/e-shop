@@ -13,3 +13,15 @@ class Delivery(models.Model):
     class Meta:
         verbose_name = "Yetkazib berish"
         verbose_name_plural = "yetkazib berivchilar"
+        
+class Status(models.Model):
+    name = models.CharField(max_length=200)
+    status = models.BooleanField()
+    created_at = models.DateTimeField(auto_now=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = "yetkazib beruvchini holati"
+        verbose_name_plural = "yetkazib beruvchilarni holati"

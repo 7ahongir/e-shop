@@ -4,11 +4,7 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-<<<<<<< HEAD
-    photo = models.ImageField(max_length=200, default=True, upload_to='static/img')
-=======
-    photo = models.ImageField(max_length=200, upload_to='static/img')
->>>>>>> 6c753ceddb5e5704f22a97ab71e26fd95c529ce3
+    photo = models.ImageField(max_length=200,blank=True, upload_to='static/img')
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
@@ -22,11 +18,7 @@ class Category(models.Model):
 class Brend(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
-<<<<<<< HEAD
-    logo = models.ImageField(max_length=200, default=True)
-=======
-    logo = models.ImageField(max_length=200, upload_to='static/img')
->>>>>>> 6c753ceddb5e5704f22a97ab71e26fd95c529ce3
+    logo = models.ImageField(max_length=200,blank=True, upload_to='static/img')
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
@@ -48,11 +40,7 @@ class Model(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-<<<<<<< HEAD
-    photo = models.ImageField(max_length=200, default=True)
-=======
-    photo = models.ImageField(max_length=200, upload_to='static/img')
->>>>>>> 6c753ceddb5e5704f22a97ab71e26fd95c529ce3
+    photo = models.ImageField(max_length=200,blank=True, upload_to='static/img')
     product_code = models.IntegerField(default=1)
     product_info = models.TextField(max_length=400)
     product_warranty = models.TextField(max_length=200)

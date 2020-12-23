@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'user',
     'payment',
     'delivery',
-    'delivery_status',
     'staff',
     'orders',
     'blog'

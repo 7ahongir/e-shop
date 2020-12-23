@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-    photo = models.ImageField(max_length=200, upload_to='static/img')
+    photo = models.ImageField(max_length=200, upload_to='static/img', null=True)
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
@@ -18,7 +18,7 @@ class Category(models.Model):
 class Brend(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
-    logo = models.ImageField(max_length=200, upload_to='static/img')
+    logo = models.ImageField(max_length=200, upload_to='static/img', null=True)
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
@@ -40,7 +40,7 @@ class Model(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    photo = models.ImageField(max_length=200, upload_to='static/img')
+    photo = models.ImageField(max_length=200, upload_to='static/img', null=True)
     product_code = models.IntegerField(default=1)
     product_info = models.TextField(max_length=400)
     product_warranty = models.TextField(max_length=200)
@@ -50,6 +50,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
     brend = models.ForeignKey(Brend, on_delete=models.SET_NULL, null=True,)
     model = models.ForeignKey(Model, on_delete=models.SET_NULL, null=True,)
+
 
     def __str__(self):
         return self.name

@@ -11,7 +11,7 @@ class Staff(models.Model):
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
     def __str__(self):
-        return self.name
+        return self.first_name
     class Meta:
         verbose_name = "Yetkazib beruvchi"
         verbose_name_plural = "Yetkazib beruvchilar"

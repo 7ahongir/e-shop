@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-    photo = models.ImageField(max_length=200)
+    photo = models.ImageField(max_length=200, upload_to='static/img')
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
@@ -18,7 +18,7 @@ class Category(models.Model):
 class Brend(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
-    logo = models.ImageField(max_length=200)
+    logo = models.ImageField(max_length=200, upload_to='static/img')
     created_at = models.DateTimeField(auto_now=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
 
@@ -40,7 +40,7 @@ class Model(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    photo = models.ImageField(max_length=200)
+    photo = models.ImageField(max_length=200, upload_to='static/img')
     product_code = models.IntegerField(default=1)
     product_info = models.TextField(max_length=400)
     product_warranty = models.TextField(max_length=200)
@@ -56,35 +56,3 @@ class Product(models.Model):
     class Meta:
         verbose_name = "Produkt"
         verbose_name_plural = "Produktlar"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# class ProductVariant(models.Model):
-#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-#     price = models.DecimalField(max_digits=10, decimal_places=2)
-#     sale_percent = models.DecimalField(max_digits=2, decimal_places=2)
-#     view_cnt = models.IntegerField(default=0, null=False, blank=True, editable=False)
-#     created_at = models.DateTimeField(auto_now=True, blank=True)
-#     updated_at = models.DateTimeField(auto_now=True, blank=True, editable=False)
-#
-#     def __str__(self):
-#         return self.product
-#     class Meta:
-#         verbose_name = "Produktlist"
-#         verbose_name_plural = "Produktlistlar"
-
-
-

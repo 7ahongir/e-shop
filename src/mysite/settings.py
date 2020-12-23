@@ -49,7 +49,9 @@ INSTALLED_APPS = [
     'user',
     'payment',
     'delivery',
-    'delivery_status'
+    'delivery_status',
+    'staff',
+    'orders'
 ]
 
 MIDDLEWARE = [
